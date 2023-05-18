@@ -36,8 +36,9 @@ export const fetchCampusThunk = (id) => async (dispatch) => {  // The THUNK
 export const addCampusThunk = (campus) => async (dispatch) => {  // The THUNK
   try {
     // API "get" call to get a student data (based on "id")from database
-    let res = await axios.get(`/api/campuses`, campus);  
+    let res = await axios.post(`/api/campuses`, campus);  
     dispatch(ac.fetchCampus(res.data));
+    return res.data;
   } catch(err) {
     console.error(err);
   }
