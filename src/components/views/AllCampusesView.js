@@ -32,7 +32,7 @@ const AllCampusesView = (props) => {
           </Link>
           <h4>campus id: {campus.id}</h4>
           <br/>
-          <button onClick={() => props.handleDelete(campus.id)}>Delete</button>
+          <button onClick={() => props.deleteCampus(campus.id)}>Delete</button>
           <p>{campus.address}</p>
           <p>{campus.description}</p>
           <hr/>
