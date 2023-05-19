@@ -129,6 +129,9 @@ export const fetchStudentThunk = id => async dispatch => {  // The THUNK
   try {
     // API "get" call to get a specific student (based on "id") data from database
     let res = await axios.get(`/api/students/${id}`);  
+    if(res.data.imageUrl == null) {
+      res.data.imageUrl = "https://cdn.pixabay.com/photo/2021/01/30/12/06/icon-5963629_1280.png";
+    }
     // Call Action Creator to return Action object (type + payload with student data)
     // Then dispatch the Action object to Reducer to display student data 
     dispatch(ac.fetchStudent(res.data));
