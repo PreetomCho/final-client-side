@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 
 /*==================================================
@@ -9,11 +8,10 @@ It constructs a React component to display the single student view page.
 ================================================== */
 const StudentView = (props) => {
   const { student, deleteStudent } = props;
-  let dispatch = useDispatch();
   let history = useHistory();
 
   const HandleDelete = (id) => {
-    dispatch(deleteStudent(id));
+    deleteStudent(id);
     history.push('/students');
   }
 
