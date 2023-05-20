@@ -1,5 +1,12 @@
 # client-starter-code
 
+Group members: Preetom Chowdhury - PreetomCho
+**Known Bugs**
+- image implementation doesn't work
+- adding/deleting new campus won't show action unless you refresh (adding will show a TypeError but refreshing will show that the action took place)
+- if students are in a deleted campus, they can't be clicked into and must be deleted
+  - in order to add students to a campus, either edit a current student information to be in that campus or add a new student and put in campus
+
 This repository is the client (front-end) starter code for Final Project - Full-Stack CRUD Application.
 
 ----------
