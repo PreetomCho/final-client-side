@@ -29,6 +29,11 @@ const StudentView = (props) => {
       <Link to={`/campus/${student.campus.id}`} style={{color: '#5972FF' }}>
         <h2>{student.campus.name}</h2>
       </Link>   
+      <Link to={`/editstudent/${student.id}`}>
+          <button>Edit Student Information</button>
+      </Link>
+      <br></br>
+      <br></br>
       <button onClick={() => HandleDelete(student.id)}>Delete</button>
     </div>
   );
