@@ -22,6 +22,9 @@ const CampusView = (props) => {
       <h1>{campus.name}</h1>
       <p>{campus.address}</p>
       <p>{campus.description}</p>
+      <Link to={`/editcampus/${campus.id}`}>
+          <button>Edit Campus Information</button>
+        </Link>
       {campus.students.length === 0 ? <p>No students enrolled</p> :
       campus.students.map( student => {
         let name = student.firstname + " " + student.lastname;
@@ -37,7 +40,8 @@ const CampusView = (props) => {
       })}
       <div>
         <br></br>
-        <Link to={'students'}>
+        <br></br>
+        <Link to={`/students`}>
         <button>Add Student</button>
         </Link>
       </div>

@@ -14,6 +14,12 @@ export const fetchAllCampusesThunk = () => async (dispatch) => {  // The THUNK
     let res = await axios.get(`/api/campuses`);  
     // Call Action Creator to return Action object (type + payload with "campuses" data)
     // Then dispatch the Action object to Reducer to update state 
+    for(let i = 0; i < res.data.length; i++){
+      if(res.data[i].imageUrl == null){
+        res.data[i].imageUrl = "https://cdn.pixabay.com/photo/2021/01/30/12/06/icon-5963629_1280.png";
+      }
+    }
+
     dispatch(ac.fetchAllCampuses(res.data));
   } catch(err) {
     console.error(err);
