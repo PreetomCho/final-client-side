@@ -1,6 +1,7 @@
 # client-starter-code
 
 Group members: Preetom Chowdhury - PreetomCho
+
 **Known Bugs**
 - image implementation doesn't work
 - adding/deleting new campus won't show action unless you refresh (adding will show a TypeError but refreshing will show that the action took place)
